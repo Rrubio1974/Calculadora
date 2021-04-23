@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Calculadora JavaSript</title>
+  </head>
+  <body onload="init();">
+    <div class="container">
+
+      <div class="row pt-3">
+
+        <!--Menú Tarea-->
+        <div class="col-12 col-sm-9 col-md-5 bg-primary">
+          <div class="row w-100 h-100 align-items-center" style="background-color: #7FB3D5;">
+            <div class="col-12 text-center">
+              <h1 class="display-4"><strong>Menu Principal</strong></h1><br>
+              <button class="btn btn-primary w-50 h-25 m-1"><h3>Home</h3></button>
+              <button class="btn btn-success w-50 h-25 m-1"><h3>Calculadora</h3></button>
+              <button class="btn btn-danger w-50 h-25 m-1"><h3>Naves</h3></button>
+            </div>
+          </div>
+        </div>
+
+          <!--Cuerpo de la calculadora-->
+        <div class="col-12 col-sm-9 col-md-7" style="background-color: skyblue;">
+          <div class="row mt-4">
+            <div class="row" style="margin-left: 1px;">
+              <div id="resultado" class="col-12 text-center bg-light p-5 rounded-3 border border-5 display-6">
+              </div>
+            </div>
+            
+            <div class="col-12 text-center">
+              <table class="table">
+                <tbody>
+                    <!--1ra parte de la calculadora-->
+                  <tr>
+                    <td >
+                      <button id="reset" class="btn btn-dark  w-100 h-100 fs-4 fw-bold">C</button>
+                    </td>
+
+                    <td >
+                      <button id="raizcuadrada" class="btn btn-dark  w-100 h-100 fs-4 fw-bold">√</button>
+                    </td>
+
+                    <td >
+                      <button id="potencia" class="btn btn-dark  w-100 h-100 fs-4 fw-bold">^</button>
+                    </td>
+
+                    <td >
+                      <button id="division" class="btn btn-dark text-light w-100 h-100 fs-4 fw-bold">/</button>
+                    </td>
+                  </tr>
+                    <!--2da parte de la calculadora-->
+                  <tr>
+                    <td >
+                      <button id="siete" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">7</button>
+                    </td>
+
+                    <td >
+                      <button id="ocho" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">8</button>
+                    </td>
+
+                    <td >
+                      <button id="nueve" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">9</button>
+                    </td>
+
+                    <td >
+                      <button id="multiplicacion" class="btn btn-dark  text-light w-100 h-100 fs-4 fw-bold">*</button>
+                    </td>
+                  </tr>
+                    <!---3ra parte de la calculadora-->
+                  <tr>
+                    <td >
+                      <button id="cuatro" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">4</button>
+                    </td>
+
+                    <td >
+                      <button id="cinco" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">5</button>
+                    </td>
+
+                    <td >
+                      <button id="seis" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">6</button>
+                    </td>
+
+                    <td >
+                      <button id="resta" class="btn btn-dark  text-light w-100 h-100 fs-4 fw-bold">-</button>
+                    </td>
+                  </tr>
+                    <!---4ta parte de la calculadora-->
+                  <tr>
+                    <td >
+                      <button id="uno" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">1</button>
+                    </td>
+
+                    <td >
+                      <button id="dos" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">2</button>
+                    </td>
+
+                    <td >
+                      <button id="tres" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">3</button>
+                    </td>
+
+                    <td >
+                      <button id="suma" class="btn btn-dark  text-light w-100 h-100 fs-4 fw-bold">+</button>
+                    </td>
+                  </tr>
+                    <!---5ta parte de la calculadora-->
+                  <tr>
+                    <td >
+                      <button id="masmenos" class="btn btn-dark  w-100 h-100 fs-4 fw-bold">±</button>
+                    </td>
+
+                    <td >
+                      <button id="cero" class="btn btn-primary  w-100 h-100 fs-4 fw-bold">0</button>
+                    </td>
+
+                    <td >
+                      <button id="punto" class="btn btn-dark  w-100 h-100 fs-4 fw-bold">.</button>
+                    </td>
+
+                    <td >
+                      <button id="igual" class="btn btn-success  text-light w-100 h-100 fs-4 fw-bold">=</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="/bootstrap/bootstrap.min.js" ></script>
+    <script src="codigo.js/funciones.js"></script>
+
+  </body>
+</html>
